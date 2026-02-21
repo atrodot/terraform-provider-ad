@@ -1,3 +1,12 @@
+## 0.6.0 (February 20, 2026)
+
+FEATURES:
+* **Resource**: `ad_user`: Add `cn` (Common Name) attribute to allow explicitly setting the AD object's CN. When not specified, defaults to `display_name` for backward compatibility. Supports create, read, and update (rename via `Rename-ADObject`).
+
+IMPROVEMENTS:
+* dependencies: update Go to `1.26.0`
+* ci: add GitHub Actions release workflow with GoReleaser and GPG signing
+
 ## 0.5.0 (March 28, 2024)
 
 * dependencies: update go to `1.21` [GH-187]

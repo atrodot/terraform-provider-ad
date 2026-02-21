@@ -41,6 +41,12 @@ func resourceADUser() *schema.Resource {
 				Required:    true,
 				Description: "The pre-win2k user logon name.",
 			},
+			"cn": {
+				Type:        schema.TypeString,
+				Optional:    true,
+				Computed:    true,
+				Description: "The CN (Common Name) of the user object. If not specified, defaults to the username part of the principal_name. This is the name displayed in Active Directory Users and Computers.",
+			},
 			"initial_password": {
 				Type:        schema.TypeString,
 				Optional:    true,
@@ -305,6 +311,7 @@ func resourceADUserRead(d *schema.ResourceData, meta interface{}) error {
 		return nil
 	}
 	_ = d.Set("sam_account_name", u.SAMAccountName)
+	_ = d.Set("cn", u.CN)
 	_ = d.Set("display_name", u.DisplayName)
 	_ = d.Set("principal_name", u.PrincipalName)
 	_ = d.Set("container", u.Container)

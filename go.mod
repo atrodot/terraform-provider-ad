@@ -1,8 +1,6 @@
 module github.com/hashicorp/terraform-provider-ad
 
-go 1.23.0
-
-toolchain go1.23.3
+go 1.26.0
 
 require (
 	github.com/hashicorp/go-uuid v1.0.3
