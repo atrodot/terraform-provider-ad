@@ -1,11 +1,15 @@
+## 0.7.0 (February 23, 2026)
+
+IMPROVEMENTS:
+* docs: update README with new registry links (`atrodot/ad`), CI info, and Go version
+* docs: document `cn` attribute in `ad_user` resource documentation
+* dependencies: update Go to `1.26.0`
+* ci: add GitHub Actions release workflow with GoReleaser and GPG signing
+
 ## 0.6.0 (February 20, 2026)
 
 FEATURES:
 * **Resource**: `ad_user`: Add `cn` (Common Name) attribute to allow explicitly setting the AD object's CN. When not specified, defaults to `display_name` for backward compatibility. Supports create, read, and update (rename via `Rename-ADObject`).
-
-IMPROVEMENTS:
-* dependencies: update Go to `1.26.0`
-* ci: add GitHub Actions release workflow with GoReleaser and GPG signing
 
 ## 0.5.0 (March 28, 2024)
 
