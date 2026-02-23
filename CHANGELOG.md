@@ -1,3 +1,8 @@
+## 0.8.0 (February 23, 2026)
+
+BUGFIXES:
+* **Resource**: `ad_user`: Fix `cannot_change_password` always reading as `false`. The attribute was incorrectly derived from the `UserAccountControl` bitmask, but AD controls this via ACLs, not UAC flags. Now reads the value directly from `Get-ADUser` output.
+
 ## 0.7.0 (February 23, 2026)
 
 IMPROVEMENTS:
